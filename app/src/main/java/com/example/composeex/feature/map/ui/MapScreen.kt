@@ -54,6 +54,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.core.content.ContextCompat
+import com.example.composeex.feature.map.model.SheetState
 import com.example.composeex.feature.map.ui.component.MapFieldMenuList
 import com.example.composeex.feature.map.ui.component.MapSearchBar
 import com.example.composeex.feature.map.ui.component.rememberMapViewWithLifecycle
@@ -62,15 +63,6 @@ import com.naver.maps.map.LocationTrackingMode
 import com.naver.maps.map.util.FusedLocationSource
 import kotlinx.coroutines.launch
 
-
-/**
- * BottomSheet 상태 (3단계)
- */
-enum class SheetState {
-    COLLAPSED,   // 접힘 (작게)
-    HALF,        // 중간
-    EXPANDED     // 전체 펼침
-}
 
 @SuppressLint("ConfigurationScreenWidthHeight")
 @OptIn(ExperimentalMaterial3Api::class)
