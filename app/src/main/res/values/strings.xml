@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">ComposeEX</string>
+    <string name="main_text">검색</string>
+
+    <string name="title_my_carrot">나의 당근</string>
+
+
+    <string name="promotion_text1">1천만명이 맡고 이용하는</string>
+    <string name="promotion_text2">당근페이</string>
+
+    <!-- section titles -->
+    <string name="menu_my_service">서비스</string>
+    <string name="menu_my_trade">나의 거래</string>
+    <string name="menu_my_favorite">나의 관심</string>
+    <string name="menu_my_activity">나의 활동</string>
+    <string name="menu_my_business">나의 비즈니스</string>
+    <string name="menu_setting">설정</string>
+    <string name="menu_support">고객지원</string>
+
+    <string-array name="service_list">
+        <item>중고거래</item>
+        <item>부동산</item>
+        <item>모임</item>
+        <item>세탁 수거</item>
+        <item>알바</item>
+        <item>중고차</item>
+        <item>동네걷기</item>
+        <item>당근이네</item>
+    </string-array>
+
+    <!-- menu items -->
+    <string name="menu_sell_history">판매내역</string>
+    <string name="menu_buy_history">구매내역</string>
+    <string name="menu_price_search">내 물건 가격 찾기</string>
+    <string name="menu_trade_book">중고거래 가계부</string>
+
+    <string name="menu_favorite_list">관심목록</string>
+    <string name="menu_keyword_alarm">키워드 알림 설정</string>
+
+    <string name="menu_my_town_post">내 동네생활 글</string>
+
+    <string name="menu_business_profile">비즈프로필 관리</string>
+    <string name="menu_ad">광고</string>
+    <string name="menu_owner_lounge">사장님 라운지</string>
+
+    <string name="menu_town_setting">내 동네 설정</string>
+    <string name="menu_town_verify">동네 인증하기</string>
+    <string name="menu_qr_scan">QR 코드 스캔</string>
+    <string name="menu_app_setting">앱 설정</string>
+
+    <string name="menu_notice">공지사항</string>
+    <string name="menu_customer_center">고객센터</string>
+    <string name="menu_feedback">의견 남기기</string>
+    <string name="menu_about">당근 더 알아보기</string>
+    <string name="menu_policy">약관 및 정책</string>
+
+
+
+    <string name="bus_info_title">(주) 당근마켓 사업자 정보</string>
+    <string name="bus_info_detail">대표: 김현우\n사업자번호: 123456\n직업정보제공사업 신고번호: K121233416311\n</string>
+    <string name="bus_info_content">당근마켓은 본 플랫폼을 통한 통신판매의 당사자가 아니며, 해당\n거래정보 및 내용에 대하여 책임을 지지 않습니다.</string>
+
+
+
+
+</resources>
+
+
+
