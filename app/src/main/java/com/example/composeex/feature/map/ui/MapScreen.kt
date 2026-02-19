@@ -71,6 +71,8 @@ fun MapScreen(
     navHostController: NavHostController,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
+
+    // git branch test
     val mapView = rememberMapViewWithLifecycle()
     val itemList = listOf("전체", "중고거래", "방금 전", "알바", "동네소식", "부동산", "중고차", "만원당근")
 
