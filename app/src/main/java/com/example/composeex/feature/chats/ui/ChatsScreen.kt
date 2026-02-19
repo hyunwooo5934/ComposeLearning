@@ -29,25 +29,22 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavHostController
+import com.example.composeex.feature.chats.model.SheetLevel
 import com.naver.maps.map.MapView
 
-enum class SheetLevel { Peek, Half, Expanded }
+
 @OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
 fun ChatsScreen(navHostController: NavHostController) {
     ThreeLevelBottomSheet(
         peekHeight = 64.dp,
-        halfRatio = 0.5f,
+        halfRatio = 0.35f,
         expandedTopGap = 80.dp,
         scrimColor = Color(0x66000000),
         content = {
             NaverMapView(modifier = Modifier.fillMaxSize())
         },
         sheet = {
-            Text(
-                text = "당근/지도앱 스타일 (Peek/Half/Expanded)",
-                style = MaterialTheme.typography.titleMedium
-            )
             Spacer(Modifier.height(12.dp))
             Column(
                 modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
