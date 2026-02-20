@@ -1,8 +1,6 @@
 package com.example.composeex.presentation.screen.home
 
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,26 +21,22 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.book.presentation.screen.home.HomeTopView
 import com.example.domain.model.weekBoxOfficeModel
 import kotlinx.coroutines.launch
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.runtime.collectAsState
-import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import com.example.book.presentation.screen.home.HomeTopBar
+import com.example.composeex.feature.home.model.HomeUiState
 import com.example.composeex.feature.home.ui.component.HomeBottomSheet
 import com.example.composeex.feature.home.ui.component.HomeDataList
 import com.example.composeex.feature.home.ui.component.HomeFieldMenuList
 import com.example.composeex.feature.home.ui.component.Scrim
 
 
-@RequiresApi(Build.VERSION_CODES.O)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-    viewModel: HomeViewModel = hiltViewModel()
+    uiState: HomeUiState
 ){
-
-    val uiState by viewModel.uiState.collectAsState()
 
     var isMenuExpanded by remember { mutableStateOf(false) }
 
@@ -70,9 +64,24 @@ fun HomeScreen(
                     .background(Color.White),
             ) {
 
-                HomeTopView(
+                HomeTopBar(
                     expanded = isMenuExpanded,
-                    onExpandedChange = { isMenuExpanded = it }
+                    onExpandedChange = { isMenuExpanded = it },
+                    click = { it ->
+                        when(it) {
+                            "onSearchClick" -> {
+
+                            }
+
+                            "onNotiClick" -> {
+
+                            }
+
+                            else -> {
+
+                            }
+                        }
+                    }
                 )
 
                 Spacer(modifier = Modifier.height(10.dp))

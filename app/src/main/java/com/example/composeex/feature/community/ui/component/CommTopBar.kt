@@ -1,7 +1,9 @@
-package com.example.composeex.presentation.screen.mycarrot.ui.component
+package com.example.composeex.feature.community.ui.component
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -12,11 +14,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.composeex.core.ui.component.BaseTopBar
 
+
 @Composable
-fun MyCarrotTopBar (
+fun CommTopBar(
     title: String,
-    onSettingsClick: () -> Unit
-){
+    click: (String) -> Unit
+) {
 
     BaseTopBar (
         left = {
@@ -28,12 +31,12 @@ fun MyCarrotTopBar (
                 fontStyle = FontStyle.Normal
             )
         },
+
         right = {
-            IconButton(onClick = onSettingsClick) {
-                Icon(imageVector = Icons.Default.Settings, contentDescription = "settings")
-            }
+            IconButton(onClick = { click("onSearchClick") }) { Icon(Icons.Default.Search, contentDescription = "Search") }
+            IconButton(onClick = { click("onNotiClick") }) { Icon(Icons.Default.Notifications, contentDescription = "Notifications") }
+            IconButton(onClick = { click("onMoreClick") }) { Icon(Icons.Default.Menu, contentDescription = "Menu") }
         }
     )
-
 
 }

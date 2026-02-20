@@ -45,22 +45,27 @@ class HomeViewModel @Inject constructor(
 
             val today = LocalDate.now().minusWeeks(1)
             val formatter = DateTimeFormatter.ofPattern("yyyyMMdd")
-            val formattedDate = today.format(formatter) // 예: 2024-05-20 [1]
+            val formattedDate = today.format(formatter)
 
-            homeUseCase.getBoxOfficeList(formattedDate).collectLatest { result ->
+            Log.e("HomeViewModel", formattedDate)
+
+            homeUseCase.getBoxOfficeList("20260101").collectLatest { result ->
                 try{
                     when(result) {
                         is ApiResult.Success -> {
 //                            _boList.value = result.value
+                            Log.e("HomeViewModel Success: ", result.toString())
                             _uiState.value = HomeUiState(isLoading = false, data = result.value)
                         }
 
                         is ApiResult.Error -> {
-
+                            Log.e("HomeViewModel Error: ", result.toString())
+                            _uiState.value = HomeUiState(isLoading = false, error = "error 발생!")
                         }
 
                         is ApiResult.Empty -> {
-
+                            Log.e("HomeViewModel Empty: ", result.toString())
+                            _uiState.value = HomeUiState(isLoading = false, error = "조회되는 데이터가 없습니다.")
                         }
                     }
                 }catch (e : Exception){
