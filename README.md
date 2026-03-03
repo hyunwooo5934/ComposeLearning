@@ -1,4 +1,4 @@
-# Android Compose Learning
+# Introduce
 
 Jetpack Compose 기반 Android 아키텍처 학습 및 실습 프로젝트.
 
