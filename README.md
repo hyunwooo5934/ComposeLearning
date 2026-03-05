@@ -1,7 +1,7 @@
 
 # Introduce
 
-Jetpack Compose 기반 UI 아키텍처 학습 프로젝트(당근마켓 스타일의 구조를 참고)
+Jetpack Compose 기반 UI 아키텍처 학습 프로젝트(당근마켓 스타일의 구조를 참고) - 진행중
 
 
 ## Project Goal
